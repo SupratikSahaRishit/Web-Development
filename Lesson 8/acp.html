@@ -13,38 +13,20 @@
             background-position: bottom left;
             background-attachment: fixed;
         }
-         @keyframes supratik {
+        /* The animation code */
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
 
-            0% {
-                background-color: red;
-            }
-
-            20% {
-                background-color: yellow;
-            }
-
-            40%{
-                background-color: violet;
-            }
-
-            60% {
-                background-color: blue;
-            }
-
-            80% {
-                background-color: green;
-            }
-
-            100%{
-                background-color: white;
-            }
-
-        }
-        div {
-            background-color: red;
-            animation-name: Supratik;
-            animation-duration: 4s;
-         }
+/* The element to apply the animation to */
+div {
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
     </style>
 </head>
 
@@ -54,7 +36,7 @@
         Welcome to Chatbot
     </div>
     <div>
-        Hi
+        Hi I am Chatbot
     </div>
    
 </body>
