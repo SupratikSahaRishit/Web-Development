@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+            function findMax() {
+                var max=0;
+                for( i= 0 ; i< arguments.length; i++ ) {
+                    if(arguments[i]>max){
+                        max=arguments[i];
+                    }
+                }
+                return max;
+            }
+            document.write(findMax(8, 4, 5, 6, 2,));
+        </script>
+    </body>
+</html>
