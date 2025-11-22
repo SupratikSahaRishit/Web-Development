@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            class student{
+                constructor(name){
+                    this.studentname=name;
+                }
+                static welcome(x){
+                    return "Welcome" + x.studentname;
+
+                }
+            }
+            myname= new student("Carol");
+            document.write(student.welcome(myname));
+        </script>
+    </body>
+</html>
