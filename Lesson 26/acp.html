@@ -1,0 +1,41 @@
+<html>
+<h2>JS Classes On ACP</h2>
+<body>
+    <script>
+        class friend {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        friend1 = new friend("Avinava", 2012);
+        document.write(friend1.age());
+        document.write("<br>")
+          class Ball {
+                constructor(brand) {
+                    this.ballname = brand;
+                }
+                present() {
+                    return 'I have a ' + this.ballname;
+                }
+            }
+            class Model extends Ball {
+                constructor(brand, mod) {
+                    super(brand);
+                    this.model = mod;
+                }
+                show() {
+                    return this.present() + ', it is a ' + this.model;
+                }
+            }
+            let myball = new Model("Addidas", "Ball");
+            document.write(myball.show());
+
+    </script>
+</body>
+
+</html>
