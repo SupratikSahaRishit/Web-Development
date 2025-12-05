@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h2>JS Callbacks</h2>
+        <p>Do a calculation and display a result .</p>
+        <script>
+            function myDisplayer(value){
+                document.write(value);
+            }
+            function myCalculator(num1 , num2, myCallback){
+                let sum = num1 + num2;
+                myCallback(sum);
+            }
+            myCalculator(5,5,myDisplayer);
+        </script>
+    </body>
+</html>
