@@ -1,0 +1,59 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgreen;
+    color: white;
+    text-align: center;
+}
+
+.cover {
+    height: 350px;
+    position: relative;
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+    background-color: silver;
+    color: green;
+}
+
+.ptext {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    background-color: indigo;
+    color: purple;
+    padding: 10px;
+
+}
+
+.navbar a {
+    float: left;
+    color: #bb0c0c;
+    text-align: center;
+    padding: 14px;
+    font-size: 20px;
+}
+
+.navbar a.active {
+    background-color: yellow;
+    color: #bb0c0c;
+}
+
+h1 {
+    color: #462f06;
+    font-size: 50px;
+}
+
+body {
+    background-color: skyblue;
+}
