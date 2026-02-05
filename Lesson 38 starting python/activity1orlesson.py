@@ -1,0 +1,10 @@
+#Python is a high level easy programming language 
+print("Welcome to Puthon")
+print("This is my first lesson")
+print("3+5=")
+print("the sum of the numbers is ", 3+5)
+print("My name is :" , "Supratik")
+print("My age is ;", 13)
+print("I am studying in ", "Grade 7")
+print("I live in", "Dhaka,Bangladesh")
+print("end ********************")
