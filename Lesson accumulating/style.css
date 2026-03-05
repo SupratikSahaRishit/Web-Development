@@ -1,0 +1,102 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgreen;
+    color: white;
+    text-align: center;
+}
+
+.cover {
+    height: 350px;
+    position: relative;
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+    background-color: silver;
+    color: green;
+}
+
+.ptext {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    background-color: indigo;
+    color: purple;
+    padding: 10px;
+
+}
+
+.navbar a {
+    float: left;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 15px; 
+    display: flex;
+}
+
+
+.navbar a.active {
+    color: white;
+}
+
+h1 {
+    color: #462f06;
+    font-size: 50px;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    text-align: right;
+}
+
+
+
+
+.topnav a {
+   float: center ;
+    display: block;
+    color: black;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+
+.topnav input[type=text] {
+    float:left;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+
+
+
+   
+#search-bar {
+    width: 800px;
+}
+     
+
+
+
+
