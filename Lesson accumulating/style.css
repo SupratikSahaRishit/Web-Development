@@ -7,7 +7,6 @@
     color: white;
     text-align: center;
 }
-
 .cover {
     height: 350px;
     position: relative;
@@ -17,14 +16,12 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
 .section {
     text-align: center;
     padding: 50px 80px;
     background-color: silver;
     color: green;
 }
-
 .ptext {
     position: absolute;
     top: 30%;
@@ -35,7 +32,6 @@
     padding: 10px;
 
 }
-
 .navbar a {
     float: left;
     background-color: brown;
@@ -45,28 +41,19 @@
     font-size: 15px; 
     display: flex;
 }
-
-
 .navbar a.active {
     color: white;
 }
-
 h1 {
     color: #462f06;
     font-size: 50px;
 }
-
 body {
     background-color: white;
 }
-
 header {
     text-align: right;
 }
-
-
-
-
 .topnav a {
    float: center ;
     display: block;
@@ -77,8 +64,6 @@ header {
     font-size: 17px;
 }
 
-
-
 .topnav input[type=text] {
     float:left;
     padding: 6px;
@@ -87,16 +72,9 @@ header {
     margin-right: 16px;
     font-size: 17px;
 }
-
-
-
-
    
 #search-bar {
     width: 800px;
 }
-     
-
-
 
 

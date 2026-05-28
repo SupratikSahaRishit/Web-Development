@@ -2,116 +2,141 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rajib's Hospital</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Services & Booking - Field Hospital</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
         body {
-            background: #f4f9ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
         }
 
-        header {
-            background: #0077b6;
+        .hero-section {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://unsplash.com') no-repeat center center/cover;
             color: white;
-            padding: 20px;
+            padding: 80px 0;
             text-align: center;
         }
 
-        nav {
-            background: #023e8a;
-            padding: 12px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-weight: bold;
-        }
-
-        .hero {
-            height: 300px;
-            background: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3') center/cover no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h1 {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px;
-            border-radius: 10px;
-        }
-
-        .services {
-            padding: 40px;
-            text-align: center;
-        }
-
-        .service-box {
-            display: inline-block;
-            width: 250px;
-            background: white;
-            margin: 15px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .about {
-            background: #caf0f8;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .contact {
-            padding: 40px;
-            text-align: center;
-        }
-
-        footer {
-            background: #023e8a;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        button {
-            background: #0077b6;
-            color: white;
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
+            border-radius: 12px;
+            overflow: hidden;
         }
 
-        button:hover {
-            background: #0096c7;
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: #0d6efd;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Book your appoinment</h1>
-        <p>On following features</p>
-    </header>
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Emergency & Temporary Medical Services</h1>
+            <p class="lead">Providing fast, reliable, and accessible healthcare when and where you need it.</p>
+        </div>
+    </div>
 
-    <nav>
-        <a href="Department.html">Departments</a>
-        <a href="Ambulance.html">Ambulance service</a>
-    </nav>
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card service-card h-100 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="card-icon mb-3">🏥</div>
+                        <h5 class="card-title fw-bold">General Consultation</h5>
+                        <p class="card-text text-muted">Get screened and examined by our qualified medical team for
+                            general health concerns.</p>
+                        <button class="btn btn-primary mt-3 w-100" data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">Book Appointment for Consultation</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card service-card h-100 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="card-icon mb-3">🌡️</div>
+                        <h5 class="card-title fw-bold">Fever & Flu Clinic</h5>
+                        <p class="card-text text-muted">Dedicated triage and testing area for fever, flu symptoms, and
+                            respiratory issues.</p>
+                        <button class="btn btn-primary mt-3 w-100" data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">Book Appointment for quick treatment</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card service-card h-100 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="card-icon mb-3">🩹</div>
+                        <h5 class="card-title fw-bold">Minor Injuries</h5>
+                        <p class="card-text text-muted">Immediate care for sprains, cuts, minor fractures, and emergency
+                            wound care.</p>
+                        <button class="btn btn-primary mt-3 w-100" data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">Book Appointment for emergency treatment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="bookingModalLabel">Schedule Appointment</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="patientName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="patientName" required
+                                placeholder="Enter your full name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="patientPhone" class="form-label">Contact Number</label>
+                            <input type="tel" class="form-control" id="patientPhone" required
+                                placeholder="Enter phone number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="serviceSelect" class="form-label">Select Service</label>
+                            <select class="form-select" id="serviceSelect" required>
+                                <option selected disabled value="">Choose a service...</option>
+                                <option value="general">General Consultation</option>
+                                <option value="fever">Fever & Flu Clinic</option>
+                                <option value="injury">Minor Injuries</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appointmentDate" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="appointmentDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appointmentTime" class="form-label">Preferred Time</label>
+                            <input type="time" class="form-control" id="appointmentTime" required>
+                        </div>
+                      <section class="confirm booking">
+                        <a href="confirm.html">Confirm Booking</a>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://jsdelivr.net"></script>
+</body>
+
+</html>
