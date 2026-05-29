@@ -56,8 +56,9 @@
                         <h5 class="card-title fw-bold">General Consultation</h5>
                         <p class="card-text text-muted">Get screened and examined by our qualified medical team for
                             general health concerns.</p>
-                        <button class="btn btn-primary mt-3 w-100" data-bs-toggle="modal"
-                            data-bs-target="#bookingModal">Book Appointment for Consultation</button>
+                        <section class="appointment">
+                            <a href="consult.html">Get appointment</a>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -69,8 +70,9 @@
                         <h5 class="card-title fw-bold">Fever & Flu Clinic</h5>
                         <p class="card-text text-muted">Dedicated triage and testing area for fever, flu symptoms, and
                             respiratory issues.</p>
-                        <button class="btn btn-primary mt-3 w-100" data-bs-toggle="modal"
-                            data-bs-target="#bookingModal">Book Appointment for quick treatment</button>
+                    <section class="appointment">
+                        <a href="Fever.html">Get appointment</a>
+                    </section>
                     </div>
                 </div>
             </div>
@@ -82,61 +84,16 @@
                         <h5 class="card-title fw-bold">Minor Injuries</h5>
                         <p class="card-text text-muted">Immediate care for sprains, cuts, minor fractures, and emergency
                             wound care.</p>
-                        <button class="btn btn-primary mt-3 w-100" data-bs-toggle="modal"
-                            data-bs-target="#bookingModal">Book Appointment for emergency treatment</button>
+                        <section class="appointment">
+                            <a href="Minor.html">Get appointment</a>
+                        </section>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title fw-bold" id="bookingModalLabel">Schedule Appointment</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4">
-                    <form>
-                        <div class="mb-3">
-                            <label for="patientName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="patientName" required
-                                placeholder="Enter your full name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="patientPhone" class="form-label">Contact Number</label>
-                            <input type="tel" class="form-control" id="patientPhone" required
-                                placeholder="Enter phone number">
-                        </div>
-                        <div class="mb-3">
-                            <label for="serviceSelect" class="form-label">Select Service</label>
-                            <select class="form-select" id="serviceSelect" required>
-                                <option selected disabled value="">Choose a service...</option>
-                                <option value="general">General Consultation</option>
-                                <option value="fever">Fever & Flu Clinic</option>
-                                <option value="injury">Minor Injuries</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="appointmentDate" class="form-label">Preferred Date</label>
-                            <input type="date" class="form-control" id="appointmentDate" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="appointmentTime" class="form-label">Preferred Time</label>
-                            <input type="time" class="form-control" id="appointmentTime" required>
-                        </div>
-                      <section class="confirm booking">
-                        <a href="confirm.html">Confirm Booking</a>
-                        </section>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://jsdelivr.net"></script>
+    
 </body>
 
 </html>
