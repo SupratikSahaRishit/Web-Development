@@ -6,7 +6,7 @@ class ReverseString:
         return " ".join(reversed_words)
 
 obj = ReverseString()
-text = "Python is very easy"
+text = "Codingal is best for learning coding . "
 
 print("Original String:", text)
 print("Reversed String:", obj.reverse_words(text))
