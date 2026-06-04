@@ -20,7 +20,7 @@ class Book:
 
 book1 = Book("Wimpy kid", "Jeff Kinney")
 book2 = Book("Lion boy", "Zizou Corder")
-book3 = Book("The Red Headed League", "Arthur Conan Doyle")
+book3 = Book("Sherlock holmes", "Arthur Conan Doyle")
 
 book1.borrow()
 book2.borrow()
