@@ -1,21 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Doctors - City Hospital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Departments</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+          nav {
+            background: #023e8a;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f5f8fc;
+        }
+
+        .departments {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            color: #0f3d6e;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .department-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .department-card {
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .department-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .department-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #0ea5e9;
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            background: #e0f2fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .icon i {
+            font-size: 30px;
+            color: #0284c7;
+        }
+
+        .department-card h3 {
+            color: #0f3d6e;
+            margin-bottom: 12px;
+            font-size: 24px;
+        }
+
+        .department-card p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .department-card a {
+            text-decoration: none;
+            color: #0284c7;
+            font-weight: 600;
+        }
+
+        .department-card a:hover {
+            color: #0f3d6e;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Our Doctors</h1>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Service.html">Services</a>
+    <a href="Doctors.html">Doctors</a>
+    <a href="Contact.html">Contact</a>
+    <a href="Appoinment.html">Appointments</a>
+  
+</nav>
+    <section class="departments">
 
-    <p>Dr. Ahmed - Cardiologist</p>
-    <p>Dr. Rahman - Dentist</p>
-    <p>Dr. Karim - Child Specialist</p>
+        <div class="section-title">
+            <h2>Our Departments</h2>
+            <p>Providing specialized healthcare services with expert doctors and advanced facilities.</p>
+        </div>
+
+        <div class="department-grid">
+
+            <div class="department-card">
+                <div class="icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Cardiology</h3>
+                <p>Expert diagnosis and treatment for heart diseases with modern cardiac care facilities.</p>
+                <a href="Cardiology.html">Learn More and Get Appoinment→</a>
+            </div>
+
+            <div class="department-card">
+                <div class="icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Neurology</h3>
+                <p>Comprehensive care for brain, spine, and nervous system disorders by specialists.</p>
+                <a href="Nuerology.html">Learn More and Get Appoinment→</a>
+            </div>
+
+            <div class="department-card">
+                <div class="icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                <h3>Orthopedics</h3>
+                <p>Advanced treatment for bones, joints, muscles, and sports-related injuries.</p>
+                <a href="Orthopedics.html">Learn More and Get Appoinment→</a>
+            </div>
+
+            <div class="department-card">
+                <div class="icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <h3>Pediatrics</h3>
+                <p>Dedicated healthcare services for infants, children, and adolescents.</p>
+                <a href="Pediatrics.html">Learn More and Get Appoinment→</a>
+            </div>
+
+            <div class="department-card">
+                <div class="icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3>General Medicine</h3>
+                <p>Primary healthcare and preventive medical services for all age groups.</p>
+                <a href="General.html">Learn More and Get Appoinment→</a>
+            </div>
+
+            <div class="department-card">
+                <div class="icon">
+                    <i class="fas fa-x-ray"></i>
+                </div>
+                <h3>Radiology</h3>
+                <p>Modern imaging services including X-Ray, CT Scan, MRI, and Ultrasound.</p>
+                <a href="Radiology.html">Learn More and Get Appoinment→</a>
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
 
 </html>
-
-
 

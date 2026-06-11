@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurology Department</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f4f8fc;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 75, 135, .85),
+                    rgba(0, 75, 135, .85)),
+                url('https://images.unsplash.com/photo-1579684385127-1ef15d508118');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .department-info {
+            max-width: 1200px;
+            margin: 70px auto;
+            padding: 0 20px;
+        }
+
+        .department-info h2 {
+            color: #004b87;
+            margin-bottom: 15px;
+        }
+
+        .department-info p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .doctors {
+            max-width: 1300px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            color: #004b87;
+        }
+
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: .4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            color: #004b87;
+            margin-bottom: 8px;
+        }
+
+        .speciality {
+            color: #0099ff;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .info {
+            margin: 8px 0;
+            color: #555;
+            font-size: 15px;
+        }
+
+        .schedule {
+            background: #f1f7ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .schedule h4 {
+            color: #004b87;
+            margin-bottom: 10px;
+        }
+
+        .schedule p {
+            margin: 5px 0;
+            color: #444;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #004b87;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #00345f;
+        }
+
+        .appointment {
+            margin-top: 80px;
+            background: white;
+            max-width: 900px;
+            padding: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .appointment h2 {
+            text-align: center;
+            color: #004b87;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            background: #004b87;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        button:hover {
+            background: #00345f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <h1>Neurology Department</h1>
+        <p>
+            Our Neurology Department provides advanced diagnosis,
+            treatment, and rehabilitation for disorders of the brain,
+            spinal cord, nerves, and muscles using modern technology
+            and experienced neurologists.
+        </p>
+    </section>
+
+    <section class="department-info">
+        <h2>About Our Department</h2>
+        <p>
+            We provide comprehensive neurological care including
+            Stroke Management, Epilepsy Treatment, Migraine Care,
+            Parkinson's Disease Management, Multiple Sclerosis Care,
+            Neuroimaging, EEG, EMG, and Neuro-Rehabilitation Programs.
+        </p>
+    </section>
+
+    <section class="doctors">
+
+        <div class="section-title">
+            <h2>Our Neurology Specialists</h2>
+        </div>
+
+        <div class="doctor-grid">
+
+            <div class="card">
+                <img src="doctor1.jpg" alt="">
+                <div class="card-content">
+                    <h3>Dr. David Wilson</h3>
+                    <p class="speciality">Senior Neurologist</p>
+                    <p class="info">MBBS, MD (Neurology)</p>
+                    <p class="info">18+ Years Experience</p>
+
+                    <div class="schedule">
+                        <h4>Schedule</h4>
+                        <p>Sunday - Tuesday</p>
+                        <p>09:00 AM - 01:00 PM</p>
+                    </div>
+
+                    <a href="#" class="btn">Book Appointment</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="doctor2.jpg" alt="">
+                <div class="card-content">
+                    <h3>Dr. Sarah Khan</h3>
+                    <p class="speciality">Stroke Specialist</p>
+                    <p class="info">MBBS, FCPS (Neurology)</p>
+                    <p class="info">14+ Years Experience</p>
+
+                    <div class="schedule">
+                        <h4>Schedule</h4>
+                        <p>Sunday - Wednesday</p>
+                        <p>02:00 PM - 06:00 PM</p>
+                    </div>
+
+                    <a href="#" class="btn">Book Appointment</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="doctor3.jpg" alt="">
+                <div class="card-content">
+                    <h3>Dr. Michael Chen</h3>
+                    <p class="speciality">Epilepsy Specialist</p>
+                    <p class="info">MBBS, DM (Neurology)</p>
+                    <p class="info">12+ Years Experience</p>
+
+                    <div class="schedule">
+                        <h4>Schedule</h4>
+                        <p>Monday - Thursday</p>
+                        <p>10:00 AM - 03:00 PM</p>
+                    </div>
+
+                    <a href="#" class="btn">Book Appointment</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="doctor4.jpg" alt="">
+                <div class="card-content">
+                    <h3>Dr. Emily Roberts</h3>
+                    <p class="speciality">Neuro-Rehabilitation Expert</p>
+                    <p class="info">MBBS, MRCP (UK)</p>
+                    <p class="info">16+ Years Experience</p>
+
+                    <div class="schedule">
+                        <h4>Schedule</h4>
+                        <p>Friday - Saturday</p>
+                        <p>04:00 PM - 08:00 PM</p>
+                    </div>
+
+                    <a href="#" class="btn">Book Appointment</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="appointment">
+
+        <h2>Request a Neurology Appointment</h2>
+
+        <form>
+
+            <div class="form-group">
+                <input type="text" placeholder="Patient Name">
+            </div>
+
+            <div class="form-group">
+                <input type="email" placeholder="Email Address">
+            </div>
+
+            <div class="form-group">
+                <input type="tel" placeholder="Phone Number">
+            </div>
+
+            <div class="form-group">
+                <select>
+                    <option>Select Neurologist</option>
+                    <option>Dr. David Wilson</option>
+                    <option>Dr. Sarah Khan</option>
+                    <option>Dr. Michael Chen</option>
+                    <option>Dr. Emily Roberts</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="date">
+            </div>
+
+            <div class="form-group">
+                <textarea rows="4" placeholder="Describe your symptoms or concerns"></textarea>
+            </div>
+
+            <button type="submit">Confirm Appointment</button>
+
+        </form>
+
+    </section>
+
+</body>
+
+</html>
