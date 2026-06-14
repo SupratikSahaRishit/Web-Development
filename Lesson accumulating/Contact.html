@@ -1,17 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Contact - City Hospital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Contact Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f4f9fc;
+        }
+
+        .contact-section {
+            padding: 80px 10%;
+        }
+
+        .contact-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-title h1 {
+            font-size: 42px;
+            color: #0d4d8b;
+        }
+
+        .contact-title p {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h2 {
+            color: #0d4d8b;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            margin-bottom: 25px;
+        }
+
+        .info-box h3 {
+            color: #0077cc;
+            margin-bottom: 8px;
+        }
+
+        .info-box p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .emergency {
+            background: #e63946;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            color: #0d4d8b;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .input-group textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        .btn {
+            width: 100%;
+            background: #0077cc;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #005fa3;
+        }
+
+        .footer-contact {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+
+        @media(max-width:768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-title h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <h1>Contact Us</h1>
+    <section class="contact-section">
 
-    <p>Phone: +880123456789</p>
-    <p>Email: rajibhospital@gmail.com</p>
-    <p>Address: Dhaka, Bangladesh</p>
+        <div class="contact-title">
+            <h1>Contact Our Hospital</h1>
+            <p>We're here to provide the best healthcare support for you and your family.</p>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+
+                <div class="info-box">
+                    <h3>📍 Address</h3>
+                    <p>32 Loyal Tank Road tanbazar, Narayanganj, Bangladesh</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>📞 Phone</h3>
+                    <p>+880 123456789</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>✉ Email</h3>
+                    <p>@rajibhospital.com</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>🕒 Working Hours</h3>
+                    <p>24/7 Emergency Services Available</p>
+                </div>
+
+                <div class="emergency">
+                    <h3>🚑 Emergency Hotline</h3>
+                    <p><strong>232</strong> or +880 174747474747</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+
+                <form>
+                    <div class="input-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-contact">
+            © 2026 Rajib's Hospital | Compassion • Care • Excellence
+        </div>
+
+    </section>
 
 </body>
 

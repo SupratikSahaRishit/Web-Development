@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Appointments</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f4f8fb;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #0d4d8b;
+        }
+
+        .header p {
+            color: #666;
+        }
+
+        .appointment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .appointment-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .appointment-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .doctor {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .doctor img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .doctor-info h3 {
+            color: #0d4d8b;
+        }
+
+        .doctor-info p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .details {
+            margin: 20px 0;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .label {
+            color: #666;
+        }
+
+        .value {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .confirmed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .completed {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .actions {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .view-btn {
+            background: #0077cc;
+            color: white;
+        }
+
+        .cancel-btn {
+            background: #e63946;
+            color: white;
+        }
+
+        .view-btn:hover {
+            background: #005fa3;
+        }
+
+        .cancel-btn:hover {
+            background: #c82333;
+        }
+
+        @media(max-width:768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div>
+                <h1>My Appointments</h1>
+                <p>Manage and track your doctor appointments</p>
+            </div>
+        </div>
+
+        <div class="appointment-grid">
+
+            <div class="appointment-card">
+
+                <div class="doctor">
+                    <img src="https://via.placeholder.com/70" alt="Doctor">
+                    <div class="doctor-info">
+                        <h3>Dr. Sarah Ahmed</h3>
+                        <p>Cardiologist</p>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="detail-row">
+                        <span class="label">Date</span>
+                        <span class="value">20 June 2026</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Time</span>
+                        <span class="value">10:30 AM</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Hospital</span>
+                        <span class="value">Rajib's Hospital</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Status</span>
+                        <span class="status confirmed">Confirmed</span>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn view-btn">View Details</button>
+                    <button class="btn cancel-btn">Cancel</button>
+                </div>
+
+            </div>
+
+            <div class="appointment-card">
+
+                <div class="doctor">
+                    <img src="https://via.placeholder.com/70" alt="Doctor">
+                    <div class="doctor-info">
+                        <h3>Dr. Michael Khan</h3>
+                        <p>Neurologist</p>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="detail-row">
+                        <span class="label">Date</span>
+                        <span class="value">24 June 2026</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Time</span>
+                        <span class="value">03:00 PM</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Hospital</span>
+                        <span class="value">Rajib's Hospital</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Status</span>
+                        <span class="status pending">Pending</span>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn view-btn">View Details</button>
+                    <button class="btn cancel-btn">Cancel</button>
+                </div>
+
+            </div>
+
+            <div class="appointment-card">
+
+                <div class="doctor">
+                    <img src="https://via.placeholder.com/70" alt="Doctor">
+                    <div class="doctor-info">
+                        <h3>Dr. Emily Johnson</h3>
+                        <p>Pediatrician</p>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="detail-row">
+                        <span class="label">Date</span>
+                        <span class="value">10 June 2026</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Time</span>
+                        <span class="value">11:00 AM</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Hospital</span>
+                        <span class="value">Rajib's Hospital</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Status</span>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn view-btn">View Details</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
