@@ -1,58 +1,65 @@
 import pygame
 
-def main():
-    pygame.init()
-    screen_width, screen_height = 500, 500
-    screen = pygame.display.set_mode((screen_width, screen_height))
-    pygame.display.set_caption('color changing sprite')
+pygame.init()
+
+WIDTH = 800
+HEIGHT = 600
 
 
-    colors = {
-        'red': pygame.Color('red'),
-        'green': pygame.Color('green'),
-        'blue': pygame.Color('blue'),
-        'yellow': pygame.Color('yellow'),
-        'white': pygame.Color('white')
-    }
-    current_color = colors['white']
-
-    x, y = 30, 30
-    sprite_width, sprite_height = 60, 60
-
-    clock = pygame.time.Clock()
-
-    done = False
-    while not done:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                done = True
-
-        pressed = pygame.key.get_pressed()
-        if pressed[pygame.K_LEFT]: x -= 3
-        if pressed[pygame.K_RIGHT]: x += 3
-        if pressed[pygame.K_UP]: y -= 3
-        if pressed[pygame.K_DOWN]: y += 3
-
-        x = min(max(0, x), screen_width - sprite_width)
-        y = min(max(0, y), screen_height - sprite_height)
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Two Rectangle Sprites")
 
 
-        if x == 0: current_color = colors['blue']
-        elif x == screen_width - sprite_width: current_color = colors['yellow']
-        elif y == 0: current_color = colors['red']
-        elif y == screen_height - sprite_height:
-            current_color = colors['green']
-        else:
-            current_color = colors['white']
-
-        screen.fill((0, 0, 0))
-        pygame.draw.rect(screen, current_color,
-                         (x, y, sprite_width, sprite_height))
-        pygame.display.flip()
-        clock.tick(90)
-
-    pygame.quit()
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
+RED = (255, 0, 0)
 
 
-if __name__ == "__main__":
-    main()
+x = 100
+y = 100
+sprite_width = 60
+sprite_height = 60
+speed = 5
+
+
+enemy_x = 500
+enemy_y = 300
+
+
+running = True
+clock = pygame.time.Clock()
+
+while running:
+ 
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+
+    keys = pygame.key.get_pressed()
+
+    if keys[pygame.K_LEFT]:
+        x -= speed
+    if keys[pygame.K_RIGHT]:
+        x += speed
+    if keys[pygame.K_UP]:
+        y -= speed
+    if keys[pygame.K_DOWN]:
+        y += speed
+
+
+    x = max(0, min(x, WIDTH - sprite_width))
+    y = max(0, min(y, HEIGHT - sprite_height))
+
+
+    screen.fill(WHITE)
+
+
+    pygame.draw.rect(screen, BLUE, (x, y, sprite_width, sprite_height))
+    pygame.draw.rect(screen, RED, (enemy_x, enemy_y, sprite_width, sprite_height))
+    pygame.display.flip()
+
+    clock.tick(60)
+
+
+pygame.quit()
