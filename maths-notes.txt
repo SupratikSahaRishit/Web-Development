@@ -1,0 +1,3 @@
+Maths: A triangle has three sides.
+Maths: The area of a rectangle is length multiplied by width.
+Maths: A right angle is 90 degrees.
